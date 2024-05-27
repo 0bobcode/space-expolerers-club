@@ -40,7 +40,8 @@ main{
 
 ul{
   list-style-type: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  height:100vh;
 }
 .child-item::before{
   content: "🚀";
@@ -51,3 +52,46 @@ ul{
   color: red;
 }
 
+ul > li{
+  color: #84a3f0;
+}
+
+
+ul li:hover{
+  color: #336dff;
+  font-size:2.2rem;
+
+  
+}
+
+.child-item:nth-child(3)::after{
+  background-color:#21262D;
+  content:"🛰️";
+}
+
+a{
+ text-decoration:none;
+  color:#8B949E;
+  text-transform:capitalize;
+}
+a::after{
+  content:"🌌";
+
+}
+
+#para-parent{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+p{
+  text-align:center;
+  font-size:1.5rem;
+}
+
+footer{
+ text-align:center; 
+}
