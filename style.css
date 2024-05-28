@@ -1,21 +1,38 @@
-*{
+/*global selector*/
+* {
   font-family: "Black Han Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin: 0px;
 }
 
+/*element selector*/
 html {
   height: 100%;
   width: 100%;
 }
 
-body{
-  background-color:#0D1117;
+body {
+  background-color: #0D1117;
   color: #C9D9D9;
 }
 
-header{
-  font-size:50px ;
+nav {
+  font-size: 2rem;
+  text-align: center;
+  position: sticky;
+  top: 0px;
+  background-color: #333;
+  padding: 10px 0px;
+}
+
+span {
+  padding: 5px 10px;
+
+}
+
+#header {
+  font-size: 50px;
   height: 100vh;
   color: #5886FF;
   display: flex;
@@ -25,73 +42,78 @@ header{
 }
 
 
-main{
- display: flex; 
- align-items: center;
-  justify-content: center;
-}
-
-#sec-1{
+ul {
+  list-style-type: none;
+  font-size: 2rem;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+
 }
 
-ul{
-  list-style-type: none;
-  font-size: 2rem;
-  height:100vh;
-}
-.child-item::before{
+/*pseudo elementes ::before */
+.child-item::before {
   content: "🚀";
 }
 
-.para-style::first-letter{
+/*pseudo elements ::first-letter */
+.para-style::first-letter {
   font-size: 30px;
   color: red;
 }
 
-ul > li{
+/*advanced selector child selector*/
+ul>li {
   color: #84a3f0;
 }
 
-
-ul li:hover{
+/*pseudo class :hover*/
+ul li:hover {
   color: #336dff;
-  font-size:2.2rem;
+  font-size: 2.2rem;
 
-  
-}
-
-.child-item:nth-child(3)::after{
-  background-color:#21262D;
-  content:"🛰️";
-}
-
-a{
- text-decoration:none;
-  color:#8B949E;
-  text-transform:capitalize;
-}
-a::after{
-  content:"🌌";
 
 }
 
-#para-parent{
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+/*pseudo class :nth child("child number") , pseudo element ::after*/
+.child-item:nth-child(3)::after {
+  background-color: #21262D;
+  content: "🛰️";
 }
 
-p{
-  text-align:center;
-  font-size:1.5rem;
+a {
+  text-decoration: none;
+  color: #8B949E;
+  text-transform: capitalize;
 }
 
-footer{
- text-align:center; 
+/*pseudo element ::after*/
+.footer-links::after {
+  content: "🌌";
+
+}
+
+/*id selector*/
+#para-parent {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  position: sticky;
+  bottom: 0px;
+  background-color: #333;
+  color: white;
+  padding: 6px 0px;
 }
